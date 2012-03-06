@@ -6947,6 +6947,7 @@
 				);
 				OTHER_LDFLAGS = "-ObjC";
 				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
 			};
 			name = Debug;
 		};
@@ -6975,8 +6976,74 @@
 				);
 				OTHER_LDFLAGS = "-ObjC";
 				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
 			};
 			name = Release;
+		};
+		50C9C7671500DF8B00A0B0EA /* Distribution */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				GCC_C_LANGUAGE_STANDARD = c99;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = NO;
+				HEADER_SEARCH_PATHS = (
+					openssl,
+					openssl/include,
+					openssl/crypto,
+				);
+				IPHONEOS_DEPLOYMENT_TARGET = 3.1;
+				OTHER_CFLAGS = (
+					"-DOPENSSL_NO_GMP",
+					"-DOPENSSL_NO_JPAKE",
+					"-DOPENSSL_NO_KRB5",
+					"-DOPENSSL_NO_MD2",
+					"-DOPENSSL_NO_RC5",
+					"-DOPENSSL_NO_RFC3779",
+					"-DOPENSSL_NO_STORE",
+				);
+				OTHER_LDFLAGS = "-ObjC";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Distribution;
+		};
+		50C9C7681500DF8B00A0B0EA /* Distribution */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				PRODUCT_NAME = Makefile;
+				ZERO_LINK = NO;
+			};
+			name = Distribution;
+		};
+		50C9C7691500DF8B00A0B0EA /* Distribution */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				DSTROOT = /tmp/openssl.dst;
+				GCC_MODEL_TUNING = G5;
+				GCC_PRECOMPILE_PREFIX_HEADER = NO;
+				INSTALL_PATH = /usr/local/lib;
+				PRODUCT_NAME = ssl;
+			};
+			name = Distribution;
+		};
+		50C9C76A1500DF8B00A0B0EA /* Distribution */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				DSTROOT = /tmp/openssl.dst;
+				GCC_MODEL_TUNING = G5;
+				GCC_PRECOMPILE_PREFIX_HEADER = NO;
+				INSTALL_PATH = /usr/local/lib;
+				PRODUCT_NAME = crypto;
+			};
+			name = Distribution;
 		};
 		A0511C58127770FD00DE46C4 /* Debug */ = {
 			isa = XCBuildConfiguration;
@@ -7035,6 +7102,7 @@
 			buildConfigurations = (
 				1DEB921F08733DC00010E9CD /* Debug */,
 				1DEB922008733DC00010E9CD /* Release */,
+				50C9C7691500DF8B00A0B0EA /* Distribution */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -7044,6 +7112,7 @@
 			buildConfigurations = (
 				1DEB922308733DC00010E9CD /* Debug */,
 				1DEB922408733DC00010E9CD /* Release */,
+				50C9C7671500DF8B00A0B0EA /* Distribution */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -7053,6 +7122,7 @@
 			buildConfigurations = (
 				A0511C58127770FD00DE46C4 /* Debug */,
 				A0511C59127770FD00DE46C4 /* Release */,
+				50C9C76A1500DF8B00A0B0EA /* Distribution */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -7062,6 +7132,7 @@
 			buildConfigurations = (
 				A0511DEE127788ED00DE46C4 /* Debug */,
 				A0511DEF127788ED00DE46C4 /* Release */,
+				50C9C7681500DF8B00A0B0EA /* Distribution */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

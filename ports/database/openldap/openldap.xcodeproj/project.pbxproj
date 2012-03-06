@@ -4364,6 +4364,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 3.1;
 				OTHER_LDFLAGS = "-ObjC";
 				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
 			};
 			name = Debug;
 		};
@@ -4378,8 +4379,66 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 3.1;
 				OTHER_LDFLAGS = "-ObjC";
 				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
 			};
 			name = Release;
+		};
+		50C9C7711500DFA600A0B0EA /* Distribution */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				GCC_C_LANGUAGE_STANDARD = c99;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = NO;
+				IPHONEOS_DEPLOYMENT_TARGET = 3.1;
+				OTHER_LDFLAGS = "-ObjC";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Distribution;
+		};
+		50C9C7721500DFA600A0B0EA /* Distribution */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				PRODUCT_NAME = Makefile;
+				ZERO_LINK = NO;
+			};
+			name = Distribution;
+		};
+		50C9C7731500DFA600A0B0EA /* Distribution */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				HEADER_SEARCH_PATHS = (
+					../../../include,
+					openldap/include,
+					include,
+				);
+				PRODUCT_NAME = ldap;
+				USER_HEADER_SEARCH_PATHS = "";
+				ZERO_LINK = NO;
+			};
+			name = Distribution;
+		};
+		50C9C7741500DFA600A0B0EA /* Distribution */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				HEADER_SEARCH_PATHS = (
+					openldap/include,
+					include,
+				);
+				PRODUCT_NAME = lber;
+				ZERO_LINK = NO;
+			};
+			name = Distribution;
 		};
 		A03AD74311D14D0900F5A51F /* Debug */ = {
 			isa = XCBuildConfiguration;
@@ -4473,6 +4532,7 @@
 			buildConfigurations = (
 				1DEB922308733DC00010E9CD /* Debug */,
 				1DEB922408733DC00010E9CD /* Release */,
+				50C9C7711500DFA600A0B0EA /* Distribution */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -4482,6 +4542,7 @@
 			buildConfigurations = (
 				A03AD74311D14D0900F5A51F /* Debug */,
 				A03AD74411D14D0900F5A51F /* Release */,
+				50C9C7721500DFA600A0B0EA /* Distribution */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -4491,6 +4552,7 @@
 			buildConfigurations = (
 				A03ADDBF11D14F1200F5A51F /* Debug */,
 				A03ADDC011D14F1200F5A51F /* Release */,
+				50C9C7731500DFA600A0B0EA /* Distribution */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -4500,6 +4562,7 @@
 			buildConfigurations = (
 				A03ADE2B11D1520A00F5A51F /* Debug */,
 				A03ADE2C11D1520A00F5A51F /* Release */,
+				50C9C7741500DFA600A0B0EA /* Distribution */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

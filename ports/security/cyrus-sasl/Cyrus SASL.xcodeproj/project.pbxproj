@@ -2110,6 +2110,7 @@
 				GCC_WARN_UNUSED_VARIABLE = NO;
 				INSTALL_PATH = /usr/local/lib;
 				PRODUCT_NAME = sasl2;
+				SKIP_INSTALL = YES;
 			};
 			name = Debug;
 		};
@@ -2125,6 +2126,7 @@
 				GCC_WARN_UNUSED_VARIABLE = NO;
 				INSTALL_PATH = /usr/local/lib;
 				PRODUCT_NAME = sasl2;
+				SKIP_INSTALL = YES;
 			};
 			name = Release;
 		};
@@ -2171,6 +2173,53 @@
 			};
 			name = Release;
 		};
+		50C9C76C1500DF9800A0B0EA /* Distribution */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				GCC_C_LANGUAGE_STANDARD = c99;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = (
+					"cyrus-sasl/sasldb",
+					"cyrus-sasl/plugins",
+					"cyrus-sasl/include",
+					"cyrus-sasl",
+					../../../include,
+				);
+				IPHONEOS_DEPLOYMENT_TARGET = 3.1;
+				OTHER_LDFLAGS = "-ObjC";
+				SDKROOT = iphoneos;
+			};
+			name = Distribution;
+		};
+		50C9C76D1500DF9800A0B0EA /* Distribution */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				PRODUCT_NAME = Makefile;
+				ZERO_LINK = NO;
+			};
+			name = Distribution;
+		};
+		50C9C76E1500DF9800A0B0EA /* Distribution */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				DSTROOT = /tmp/sasl2.dst;
+				GCC_MODEL_TUNING = G5;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = sasl2_Prefix.pch;
+				GCC_WARN_UNUSED_VARIABLE = NO;
+				INSTALL_PATH = /usr/local/lib;
+				PRODUCT_NAME = sasl2;
+				SKIP_INSTALL = YES;
+			};
+			name = Distribution;
+		};
 		A0FB53DB126E52C60057FEE9 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -2199,6 +2248,7 @@
 			buildConfigurations = (
 				1DEB921F08733DC00010E9CD /* Debug */,
 				1DEB922008733DC00010E9CD /* Release */,
+				50C9C76E1500DF9800A0B0EA /* Distribution */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -2208,6 +2258,7 @@
 			buildConfigurations = (
 				1DEB922308733DC00010E9CD /* Debug */,
 				1DEB922408733DC00010E9CD /* Release */,
+				50C9C76C1500DF9800A0B0EA /* Distribution */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -2217,6 +2268,7 @@
 			buildConfigurations = (
 				A0FB53DB126E52C60057FEE9 /* Debug */,
 				A0FB53DC126E52C60057FEE9 /* Release */,
+				50C9C76D1500DF9800A0B0EA /* Distribution */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

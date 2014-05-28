@@ -1,6 +1,42 @@
 
 iOS Ports Library
-Copyright (C) 2011 Bindle Binaries
+Copyright (C) 2011, 2012 Bindle Binaries
+
+0.7   2013-01-24
+      - Changing arguments for external build tool argument from "all" to
+        $(ACTION). (syzdek)
+      - Fixing typos in README. (syzdek)
+      - Fixing compile problems with iOSPorts when compiling for iOS
+        simulator. (syzdek)
+      - Updating OpenSSL to version 1.0.1c. (syzdek)
+      - Updating Cyrus-SASL to version 2.1.25. (syzdek)
+      - Updating OpenLDAP to version 2.4.33. (syzdek)
+      - Updating PCRE to version 8.31. (syzdek)
+      - Updating global disclean target to distclean all packages. (syzdek)
+      - Adding shared Xcode schemes for targets. (syzdek)
+
+0.6   2012-05-30
+      - Updating project files for Xcode 4.3. (syzdek)
+      PCRE
+      - Adding flag to PCRE project to "Skip Install" when building
+        libpcre.a. (syzdek)
+      - Adding quick start instructions for Xcode 4. (syzdek)
+      - Adding OpenSSL as a target dependency for scrypt port. (syzdek)
+
+0.5   2012-02-14
+      iOS Ports
+      - Reverting supported architectures back to armv6, armv7. (syzdek)
+      - Toggling "Skip Install" in the Xcode project files to "YES" in order
+        to allow projects linking to iOS Ports to be distributed with a
+        Ad-Hoc provisioning profile. (syzdek)
+      - Refactoring iOSPorts library to simplify the code base and to reduce
+        the library to a just providing package information without providing
+        a framework for presenting the package information.  The framework
+        is being migrated to BindleKit. (syzdek)
+      - Adding flag to iOSPorts project to "Skip Install" when building
+        libiOSPorts.a. (syzdek)
+      scrypt
+      - Importing scrypt package from lhunath. (https://github.com/lhunath)
 
 0.4   2011-09-04
       iOS Ports

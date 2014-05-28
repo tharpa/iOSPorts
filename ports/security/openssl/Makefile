@@ -38,7 +38,7 @@
 # Package Information
 PACKAGE_NAME				= OpenSSL SSL/TLS Toolkit
 PACKAGE_TARNAME				= openssl
-PACKAGE_VERSION				= 1.0.0a
+PACKAGE_VERSION				= 1.0.1c
 PACKAGE_DIR				= $(PACKAGE_TARNAME)-$(PACKAGE_VERSION)
 PACKAGE_FILEEXE				= tar.gz
 PACKAGE_FILE				= $(PACKAGE_DIR).$(PACKAGE_FILEEXE)
@@ -56,7 +56,7 @@ $(PKGHEADERS): $(PACKAGE_TARNAME)
 	FILE="build-aux/`basename ${@}`"; cp $${FILE} ${@};
 
 openssl/patched_for_xcode: $(PKGHEADERS)
-	patch -N -p0 -i build-aux/openssl-1.0.0a.patch || exit 0
+	patch -N -p0 -i build-aux/openssl-$(PACKAGE_VERSION).patch || exit 0
 	touch openssl/patched_for_xcode
 
 ../../../include/openssl/opensslconf.h: $(PKGHEADERS)
@@ -66,7 +66,6 @@ openssl/patched_for_xcode: $(PKGHEADERS)
 extra-prep: $(PKGHEADERS) ../../../include/openssl/opensslconf.h openssl/patched_for_xcode
 
 clean-local:
-	/bin/rm -Rf include
 	/bin/rm -Rf ../../../include/openssl
 
 distclean-local:

@@ -1,6 +1,6 @@
 /*
  *  iOS Ports Library
- *  Copyright (c) 2010, Bindle Binaries
+ *  Copyright (c) 2012 Bindle Binaries
  *  All rights reserved.
  *
  *  @BINDLE_BINARIES_BSD_LICENSE_START@
@@ -216,13 +216,13 @@ void iosports_usage(void)
 /// displays version information
 void iosports_version(void)
 {
-   printf(("%s (%s) %i.%i\n"
+   printf(("%s (%s) %s\n"
          "Written by David M. Syzdek.\n"
          "\n"
          "%s\n"
          "This is free software; see the source for copying conditions.  There is NO\n"
          "warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.\n"
-      ), PROGRAM_NAME, PACKAGE_NAME, kiOSPortsVersionMajor, kiOSPortsVersionMinor, PACKAGE_COPYRIGHT
+      ), PROGRAM_NAME, PACKAGE_NAME, PACKAGE_VERSION, PACKAGE_COPYRIGHT
    );
    return;
 }
@@ -391,13 +391,33 @@ int main(int argc, char * argv[])
    fprintf(cnf.fs, "/* license imported from %s */\n", cnf.pkg_license_file ? cnf.pkg_license_file : "dreamland");
    fprintf(cnf.fs, "/* generated with %s */\n", PROGRAM_NAME);
    fprintf(cnf.fs, "/* generated on %s */\n", datebuff);
-   fprintf(cnf.fs, "#import <iOSPorts/iOSPortsTypes.h>\n");
+   fprintf(cnf.fs, "#import <iOSPorts/iOSPorts.h>\n");
    fprintf(cnf.fs, "const iOSPortsPKGData iOSPorts_pkgdata_%s =\n", cnf.pkg_id);
    fprintf(cnf.fs, "{\n   ");
-   fprintf(cnf.fs, (cnf.pkg_id      ? "\"%s\"" : "NULL"), cnf.pkg_id);      fprintf(cnf.fs, ", // pkg_id\n   ");
-   fprintf(cnf.fs, (cnf.pkg_name    ? "\"%s\"" : "NULL"), cnf.pkg_name);    fprintf(cnf.fs, ", // pkg_name\n   ");
-   fprintf(cnf.fs, (cnf.pkg_version ? "\"%s\"" : "NULL"), cnf.pkg_version); fprintf(cnf.fs, ", // pkg_version\n   ");
-   fprintf(cnf.fs, (cnf.pkg_website ? "\"%s\"" : "NULL"), cnf.pkg_website); fprintf(cnf.fs, ", // pkg_website\n   ");
+   if ((cnf.pkg_id))
+   {
+      fprintf(cnf.fs, "\"%s\", // pkg_id\n   ", cnf.pkg_id);
+   } else {
+      fprintf(cnf.fs, "NULL, // pkg_id\n   ");
+   };
+   if ((cnf.pkg_name))
+   {
+      fprintf(cnf.fs, "\"%s\", // pkg_name\n   ", cnf.pkg_name);
+   } else {
+      fprintf(cnf.fs, "NULL, // pkg_name\n   ");
+   };
+   if ((cnf.pkg_version))
+   {
+      fprintf(cnf.fs, "\"%s\", // pkg_version\n   ", cnf.pkg_version);
+   } else {
+      fprintf(cnf.fs, "NULL, // pkg_version\n   ");
+   };
+   if ((cnf.pkg_website))
+   {
+      fprintf(cnf.fs, "\"%s\", // pkg_website\n   ", cnf.pkg_website);
+   } else {
+      fprintf(cnf.fs, "NULL, // pkg_website\n   ");
+   };
    fprintf(cnf.fs, ((fd == -1) ? "{ 0x00 };" : "{")); fprintf(cnf.fs, "  // pkg_license\n     ");
    if (fd != -1)
    {

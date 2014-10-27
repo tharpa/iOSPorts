@@ -7063,7 +7063,7 @@
 				GCC_C_LANGUAGE_STANDARD = c99;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_THUMB_SUPPORT = NO;
-				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_VERSION = "";
 				"GCC_WARN_64_TO_32_BIT_CONVERSION[arch=*64]" = NO;
 				GCC_WARN_MISSING_PARENTHESES = NO;
 				GCC_WARN_UNUSED_VALUE = NO;
@@ -7072,7 +7072,6 @@
 					openssl/include,
 					openssl/crypto,
 				);
-				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
 				OTHER_CFLAGS = (
 					"-DOPENSSL_NO_GMP",
 					"-DOPENSSL_NO_JPAKE",
@@ -7085,7 +7084,6 @@
 				OTHER_LDFLAGS = "-ObjC";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
-				VALID_ARCHS = "armv7 armv7s";
 			};
 			name = Debug;
 		};
@@ -7095,7 +7093,7 @@
 				CLANG_ENABLE_MODULES = YES;
 				GCC_C_LANGUAGE_STANDARD = c99;
 				GCC_THUMB_SUPPORT = NO;
-				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_VERSION = "";
 				"GCC_WARN_64_TO_32_BIT_CONVERSION[arch=*64]" = NO;
 				GCC_WARN_MISSING_PARENTHESES = NO;
 				GCC_WARN_UNUSED_VALUE = NO;
@@ -7104,7 +7102,6 @@
 					openssl/include,
 					openssl/crypto,
 				);
-				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
 				OTHER_CFLAGS = (
 					"-DOPENSSL_NO_GMP",
 					"-DOPENSSL_NO_JPAKE",
@@ -7117,7 +7114,6 @@
 				OTHER_LDFLAGS = "-ObjC";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
-				VALID_ARCHS = "armv7 armv7s";
 			};
 			name = Release;
 		};
@@ -7126,7 +7122,7 @@
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
 				GCC_C_LANGUAGE_STANDARD = c99;
-				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_VERSION = "";
 				"GCC_WARN_64_TO_32_BIT_CONVERSION[arch=*64]" = NO;
 				GCC_WARN_MISSING_PARENTHESES = NO;
 				GCC_WARN_UNUSED_VALUE = NO;
@@ -7135,7 +7131,6 @@
 					openssl/include,
 					openssl/crypto,
 				);
-				IPHONEOS_DEPLOYMENT_TARGET = 3.1;
 				OTHER_CFLAGS = (
 					"-DOPENSSL_NO_GMP",
 					"-DOPENSSL_NO_JPAKE",
@@ -7148,7 +7143,6 @@
 				OTHER_LDFLAGS = "-ObjC";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
-				VALID_ARCHS = "armv7 armv7s";
 			};
 			name = Distribution;
 		};

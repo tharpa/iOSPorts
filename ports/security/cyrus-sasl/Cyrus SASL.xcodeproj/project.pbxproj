@@ -2138,7 +2138,6 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 5.1.1;
 				OTHER_LDFLAGS = "-ObjC";
 				SDKROOT = iphoneos;
-				VALID_ARCHS = "armv7 armv7s";
 				WARNING_CFLAGS = (
 					"-Wno-incompatible-pointer-types-discards-qualifiers",
 					"-Wno-incompatible-pointer-types",
@@ -2168,7 +2167,6 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 5.1.1;
 				OTHER_LDFLAGS = "-ObjC";
 				SDKROOT = iphoneos;
-				VALID_ARCHS = "armv7 armv7s";
 				WARNING_CFLAGS = (
 					"-Wno-incompatible-pointer-types-discards-qualifiers",
 					"-Wno-incompatible-pointer-types",
@@ -2197,7 +2195,6 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 5.1.1;
 				OTHER_LDFLAGS = "-ObjC";
 				SDKROOT = iphoneos;
-				VALID_ARCHS = "armv7 armv7s";
 				WARNING_CFLAGS = (
 					"-Wno-incompatible-pointer-types-discards-qualifiers",
 					"-Wno-incompatible-pointer-types",

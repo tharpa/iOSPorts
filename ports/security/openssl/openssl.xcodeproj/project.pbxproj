@@ -7072,6 +7072,7 @@
 					openssl/include,
 					openssl/crypto,
 				);
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				ONLY_ACTIVE_ARCH = YES;
 				OTHER_CFLAGS = (
 					"-DOPENSSL_NO_GMP",
@@ -7103,6 +7104,7 @@
 					openssl/include,
 					openssl/crypto,
 				);
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				OTHER_CFLAGS = (
 					"-DOPENSSL_NO_GMP",
 					"-DOPENSSL_NO_JPAKE",
@@ -7132,6 +7134,7 @@
 					openssl/include,
 					openssl/crypto,
 				);
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				OTHER_CFLAGS = (
 					"-DOPENSSL_NO_GMP",
 					"-DOPENSSL_NO_JPAKE",
